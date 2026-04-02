@@ -1,12 +1,9 @@
 # Table of Contents
 
 * [Harness Engineering Playbook](README.md)
-* [Structural Characteristics of AI and Engineering Challenges](chapters/01-framework.md)
-  * [How Agents Work](chapters/01a-how-agents-work.md)
-  * [Structural Characteristics of AI](chapters/01b-characteristics.md)
-  * [Why Your AI Transformation Is Stuck](chapters/01c-why-transformation-fails.md)
+* [Introduction: From Vibe Coding to Harness Engineering](chapters/00-introduction.md)
 
-### Part I: Reliable Agent Programming (1→10x)
+### Part I: Reliable Agent Programming (1.5x → 5-10x)
 
 * [The Starting Point of Reliable Delivery: Specification](chapters/02-specification.md)
   * [Input Determines Output: Why the Bottleneck in the Agent Era Is Specification](chapters/02a-why-spec.md)
@@ -22,8 +19,9 @@
   * [Not Check After Done, but Check While Doing: Continuous Feedback During Execution](chapters/03d-continuous-feedback.md)
   * [Output Too Fast to Review: Using Agents to Verify Agents](chapters/03e-adversarial-verification.md)
   * [So What Do I Do: From Reviewing Code to Designing Verification Systems](chapters/03f-new-role.md)
+* [Systems Need Iteration Too: Evolving Specs and Verification](chapters/evolution-v1.md)
 
-### Part II: Scaling Agent Development (10→100x)
+### Part II: Scaling Agent Development (5-10x → 100x)
 
 * [Letting Agents Run: Decomposition, Context, and Memory](chapters/04-long-running.md)
   * [What Happens After You Let Go: The Context Wall](chapters/04a-context-wall.md)
@@ -44,17 +42,20 @@
     * [Environment as Code: Reproducibility as the Foundation of Reliable Feedback](chapters/05c5-iac.md)
     * [When the Signal Turns Red: Agent Troubleshooting Capability](chapters/05c6-troubleshooting.md)
   * [How Many Can You Manage: Span of Control](chapters/05d-span.md)
+* [When Nobody's Watching: Automated Drift Detection](chapters/evolution-v2.md)
 
 ### Part III: Governing the 100x Organization
 
-* [Multi-Person Collaboration: Organizational Design for Hybrid Teams](chapters/06-hybrid-team.md)
+* [Multi-Person Collaboration: Reshaping Team Structure and Processes](chapters/06-hybrid-team.md)
   * [Why Your Team Structure No Longer Works](chapters/06a-why-old-structure-fails.md)
   * [Bottleneck Shift: From Code to Organization](chapters/06b-bottleneck-shift.md)
-  * [Redesigning Roles Around Governance, Not Execution](chapters/06c-new-roles.md)
   * [Making Processes Match Agent Speed](chapters/06d-process-speed.md)
   * [Define Boundaries Before Deploying Agents: Conway's Law Still Applies](chapters/06e-conway.md)
   * [No Silver Bullet, but There Are Principles](chapters/06f-principles.md)
-* [Organizational Assets for the New Era](chapters/07-beyond.md)
+* [After You Stop Writing Code: Redefining the Engineer's Role](chapters/role-redefinition.md)
+  * [Redesigning Roles Around Governance, Not Execution](chapters/06c-new-roles.md)
+* [Organizational Assets for the New Era](chapters/evolution-v3.md)
+  * [Organizational Assets for the New Era](chapters/07-beyond.md)
 
 ---
 
