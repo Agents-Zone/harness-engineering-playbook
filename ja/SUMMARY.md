@@ -1,6 +1,6 @@
 # 目次
 
-* [Harness Engineering Playbook](README.md)
+* [まえがき](preface.md)
 * [AIの構造的特性とエンジニアリング課題](chapters/01-framework.md)
   * [Agentの仕組み](chapters/01a-how-agents-work.md)
   * [AIの構造的特性](chapters/01b-characteristics.md)

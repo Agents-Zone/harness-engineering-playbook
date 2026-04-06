@@ -1,4 +1,7 @@
 {
   "title": "Harness Engineering Playbook",
-  "plugins": ["-sharing", "expandable-chapters"]
+  "plugins": ["-sharing", "expandable-chapters"],
+  "pdf": {
+    "chapterMark": "none"
+  }
 }

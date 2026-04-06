@@ -5,3 +5,7 @@ For the first three chapters, you were still sitting in front of the Agent in a 
 The reality is often disastrous. The community is full of YOLO mode failure stories: the Agent ran for two hours, produced thousands of lines of code, but the architectural decisions from the first half were silently overridden in the second half, interface definitions were inconsistent front to back, and the same problem was solved three different ways. The time you spend fixing things exceeds the time it would have taken to write it yourself. Research from Alibaba and Sun Yat-sen University has also validated this: Agent performance systematically degrades in ultra-long-running tasks; the longer the task and the more the context bloats, the more severely output quality declines. [citation]
 
 The problem is the context wall. The Agent's effective processing capacity has a hard ceiling, and given enough execution time, it will hit that ceiling. But this wall can be climbed. Task decomposition cuts big tasks into Agent-sized chunks, and knowledge persistence keeps critical information alive across session boundaries. Master these techniques and an Agent can work continuously across sessions and days on a project. You transition from being the Agent's real-time conversation partner to being the designer and acceptor of tasks.
+
+---
+
+*Harness Engineering Playbook · [AgentsZone](https://agentszone.ai) Community*

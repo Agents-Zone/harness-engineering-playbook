@@ -19,3 +19,7 @@ We believe they are the infrastructure and knowledge systems that enable Agents 
 A company's competitive advantage will shift from "we have a codebase nobody can replicate" to "we have a system that enables Agents to produce high-quality code efficiently on any project." Code can be rewritten, but this system requires continuous accumulation and evolution through practice.
 
 This chapter is still under exploration. The following are directions we are currently thinking about; as community practice deepens, this content will continue to be updated.
+
+---
+
+*Harness Engineering Playbook · [AgentsZone](https://agentszone.ai) Community*

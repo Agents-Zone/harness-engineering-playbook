@@ -1,6 +1,6 @@
 # Table of Contents
 
-* [Harness Engineering Playbook](README.md)
+* [Preface](preface.md)
 * [Structural Characteristics of AI and Engineering Challenges](chapters/01-framework.md)
   * [How Agents Work](chapters/01a-how-agents-work.md)
   * [Structural Characteristics of AI](chapters/01b-characteristics.md)
