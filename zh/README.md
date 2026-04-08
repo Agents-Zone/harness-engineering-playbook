@@ -73,13 +73,11 @@ Vibe Coding 是起点：凭感觉写 prompt，让 AI 生成代码，能跑就行
 
 ### 卷一：可靠的 Agent 编程 (1→10x)
 
-* [可靠交付的起点：规约](chapters/02-specification.md)
-  * [输入决定输出：为什么 Agent 时代的瓶颈是规约](chapters/02a-why-spec.md)
-  * [写给机器的操作手册：机器可读规约长什么样](chapters/02b-machine-readable-spec.md)
-  * [写完之后怎么验证：用文档测试在编码前找漏洞](chapters/02c-doc-testing.md)
-  * [规约清晰了但产出还是漏东西：隐性知识的外化](chapters/02d-tacit-knowledge.md)
-  * [多个信息源互相矛盾：信任环与裁决规则](chapters/02e-trust-rings.md)
-  * [规约也会腐烂：失效模式与持续维护](chapters/02f-spec-decay.md)
+* [规约：与 Agent 对齐意图](chapters/02-specification.md)
+  * [意图对齐：Vibe Coding 为什么失败](chapters/02a-intent-alignment.md)
+  * [用结构传达意图：分层与维度](chapters/02b-structured-intent.md)
+  * [迭代出一份可执行的 Spec](chapters/02c-iterative-spec.md)
+  * [实践：AILock-Step Feature Workflow](chapters/02d-case-study.md)
 * [可靠交付的保障：自动化质量控制](chapters/03-verification.md)
   * [从愿望清单到可执行约束：测试先行](chapters/03a-test-first.md)
   * [AI 写代码又写测试：共谋问题](chapters/03b-collusion.md)
