@@ -1,8 +1,8 @@
-# The Starting Point of Reliable Delivery: Specification
+# Specification: Aligning Intent with the Agent
 
-Vibe coding can handle a project you can finish in a weekend: write a script, build a prototype, make a personal tool. Once a project requires continuous iteration, multi-person collaboration, or stable operation in a production environment, the randomness of vibe coding becomes a fatal flaw.
+Vibe Coding can handle requirements that fit in a single afternoon. Once a project needs sustained iteration, the conversational mode of Vibe Coding becomes a bottleneck for intent alignment.
 
-Add specification, and your capability boundary immediately expands. A clear spec enables an Agent to reliably complete the development of a single feature module, from interface definition through passing tests to code merge. This is already enough to support the daily iteration of a small product. Subsequent chapters will continue to expand this boundary, but specification is the foundation. All subsequent practices, including verification, decomposition, and orchestration, are built on top of specification. Agent development without specification is just organized vibe coding.
+This chapter is about building mechanisms for intent alignment. It starts by diagnosing why Vibe Coding fails, establishes a methodological framework around information layering and structured dimensions, then shows how to use that framework to iteratively produce a spec ready for Agent execution. Finally, a real-world project workflow ties everything together.
 
 ---
 

@@ -22,6 +22,36 @@ When translating content between languages:
 6. **Japanese (ja)**: Professional technical book style, です/ます form for explanatory passages
 7. **English (en)**: Clear, concise, professional technical writing
 
+## Writing Style
+
+This book follows O'Reilly-style technical writing. All chapters in all languages must adhere to these rules:
+
+### Tone and Language
+- No flowery language. No marketing words like "惊喜", "revolutionary", "game-changing".
+- No filler, no pleasantries. Get to the point.
+- Use data and logic, not adjectives.
+- No quotes around terms unless quoting someone directly.
+
+### Sentence Structure
+- No em dashes (——/—/--). Split into two sentences, or use a comma/colon. Especially avoid "主句——插入——主句" structures.
+- No semicolons. Use periods or commas.
+- Prefer positive assertions over negative constructions. Instead of "X is not Y", say what X actually is.
+- Prefer natural paragraphs over bullet points. Use bullet points only for genuinely parallel items (lists of tools, steps in a process).
+
+### Content Organization
+- Every section needs motivation. Don't introduce a concept without first establishing the problem it solves. Content should be problem-driven, not technique-driven.
+- Maintain a takeaway hierarchy: chapter takeaway → section takeaway → paragraph takeaway. Small takeaways build up to support the chapter takeaway. Without this hierarchy, the text is just listing things.
+- Don't include everything that has insight. Only include material that resonates with the current section's takeaway.
+- Distinguish principle from practice. Principles (why something works) belong in methodology sections. Practices (how to do it) belong in operational sections. Don't mix them.
+- Don't repeat what earlier chapters already established. Reference earlier conclusions and build on them.
+- This is a teaching book, not a survey. Frameworks and case studies serve as evidence for principles, not as parallel exhibits. Avoid comparison tables across multiple frameworks.
+- Don't present problems as unresolved if solutions exist in the community. The book should present principles with case support, not reflections on gaps.
+
+### Concept Framing
+- Extract principles from implementations. The book teaches principles that readers apply in their own context, not specific tools to copy.
+- When a concept belongs to another domain (e.g., product management's user story methodology), reference it as common sense and note its relevance to Agent development, but don't teach the domain itself.
+- Human's role in Agent development is not that humans are "better at" certain tasks. It's that certain judgments (intent alignment) can ONLY be made by humans because intent exists only in the human's mind.
+
 ## Build
 
 ```bash

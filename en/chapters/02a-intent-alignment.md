@@ -1,0 +1,47 @@
+# Intent Alignment: Why Vibe Coding Fails
+
+## Starting with Vibe Coding
+
+You have probably been through a phase like this. You open an Agent, describe a requirement in natural language, and working code appears within minutes. You run it, tweak it a couple of times, and it works. You start handing more and more tasks to the Agent. In one afternoon you ship what used to take two days. The initial experience of Vibe Coding is genuinely good.
+
+The problems creep in gradually.
+
+In your fifth round of conversation you state a constraint: "All API responses must include an error code field." The Agent complies. By round twenty, you ask it to add a new endpoint. The generated code has no error code field. You only catch this during testing. You scroll back through the conversation history and the constraint is still there, but fifteen rounds of discussion about other features sit between it and the current request. By the time the Agent generates code for round twenty, that round-five constraint has fallen out of its effective attention window.
+
+This is one of the most common failure modes of Vibe Coding: early instructions get crowded out of the Agent's effective attention by subsequent conversation. You remember the constraint. You assume the Agent does too. But Agent attention is not evenly distributed across an entire conversation. Research shows that LLMs processing long text pay more attention to the beginning and the end, while the middle tends to be neglected (a phenomenon known as "lost in the middle"). If your constraint happens to be sandwiched between large blocks of code output and follow-up discussion, the Agent may effectively "not see" it.
+
+The second failure mode is more subtle. You start by saying you will use SQLite for storage. Halfway through, you realize you need concurrent writes and switch to PostgreSQL. For you this is a clear decision change: the later instruction supersedes the earlier one. But the Agent does not see two decision points on a timeline. It sees a flat token sequence containing both "use SQLite" and "use PostgreSQL," with neither instruction carrying higher priority than the other.
+
+The result may be that the Agent mixes both database approaches in subsequent code. Connection pool configuration follows PostgreSQL conventions, but a helper script still calls the SQLite API. Worse, this kind of problem is hard to catch in review, because each piece of code looks reasonable on its own. The contradiction only becomes visible at the system level.
+
+For humans, conversation has a timeline, context, and implicit priority ordering. Later statements override earlier ones. That is a basic default of human communication. For an LLM, none of these implicit rules exist. The entire conversation is a stream of tokens where earlier and later tokens have equal standing in the attention mechanism. When two instructions conflict, the Agent has no reliable mechanism for deciding which one to follow.
+
+The third failure mode is directly tied to conversation length. When your conversation with the Agent grows long enough that the context approaches its limit, tools like Claude Code and Codex automatically perform compaction. The system compresses earlier conversation into a summary, keeping only what it considers important, to make room for new exchanges.
+
+The problem with compaction is that the system, not you, decides what is important and what is not. An architectural constraint you spent twenty minutes explaining early in the conversation might be compressed into a single sentence after compaction, or it might vanish entirely. You receive no notification saying "the constraint you mentioned earlier has been removed from context." You continue the conversation, continue making requests, and the Agent continues generating code. Only when you notice the output violates that constraint do you realize the information is gone.
+
+This differs from the attention decay described earlier. Attention decay means the information is still in context but the Agent fails to notice it. Compaction means the information has been deleted outright, so the Agent cannot notice it even if it tries. One is blurry vision. The other is blindness.
+
+These three failure modes look like different phenomena: constraints ignored, instructions conflicting, information lost. But they share a common root cause.
+
+Your intent lives inside the conversation. And conversation is a medium that expands, contradicts itself, and actively discards content. With every additional round, earlier intent gets pushed further away. When the conversation grows long enough, the system actively deletes some of it. The intent alignment between you and the Agent rests on a foundation that is constantly eroding.
+
+## The Engineering Nature of Intent Alignment
+
+The introduction covered three structural characteristics of Agents: non-determinism, no persistent memory, and inability to self-verify. For the specific problem of "how to convey intent to an Agent," the most critical limitation comes from combining two of these: limited context (an extension of no persistent memory) and uneven attention (which affects the actual reception quality of information).
+
+If these two limitations did not exist, intent alignment would be a simple problem. You would dump all project documentation, all code, the entire git history, and every design discussion into the Agent. It would digest everything and execute perfectly. You would only need to align once, at the start of the project.
+
+In reality you cannot do this. Current mainstream models offer context windows ranging from 128K to 1M tokens, which sounds large. But a medium-sized project with tens of thousands of lines of code plus documentation and configuration easily reaches hundreds of thousands of tokens. Add conversation history and the Agent's own chain-of-thought reasoning, and space runs out quickly. And as discussed earlier, even when information fits within the context window, attention is not evenly distributed. The more information you add, the less attention each piece actually receives. This relationship is not linear: past a certain point, adding more information does not help alignment. It actively hurts it, because truly important information gets drowned in noise.
+
+When Ryan Yang was developing his AI agent platform AnyClaw, this was the first problem he hit. He was handling multiple features within the same context and found that information from different features interfered with each other. Module names, variable names, and design constraints from one feature's spec would "leak" into another feature's implementation. The Agent's attention jumped between multiple features, and none of them received enough effective attention. In his words: "Even though the context window keeps getting bigger, with too much redundant information the attention still drifts."
+
+This problem may not be obvious in small projects. A few hundred lines of code, two or three modules, and all the information together occupies only a small portion of the context. The Agent's attention has plenty of room. But once a project reaches a certain scale (thousands of lines, dozens of modules, multiple concerns), you start observing the same phenomenon: the Agent starts "losing focus" mid-task, earlier constraints get overwritten by later information, and output starts drifting from your expectations.
+
+This limitation transforms intent alignment from a communication problem into an engineering problem. You cannot pour all intent into the Agent at once and expect it to digest everything. You need to make a series of design decisions: what information goes into context, what stays out. What goes at the beginning (a high-attention position), what goes later. What gets loaded every time, what gets loaded only when the current task needs it. What granularity of information to give the Agent: too coarse and it will not understand accurately, too fine and its attention gets scattered.
+
+Together, these decisions form an information architecture. The goal of this architecture is to ensure that, given limited context and uneven attention, the Agent receives the intent information it actually needs at every point of execution.
+
+The mainstream spec-driven development frameworks in the community today vary considerably in methodology, but on this point they have made remarkably consistent design decisions: they all impose hard limits on the information loaded into context. OpenSpec caps project context at 50KB. AILock-Step caps it at 200 lines. BMAD requires loading only the current step's documents, prohibiting multiple steps from being loaded simultaneously. Spec Kit loads only the artifacts needed for the current phase. Four independently evolved systems arrived at nearly the same decision. This tells you that context management is an inescapable core problem in this domain.
+
+The rest of this chapter is built around this information architecture. The next section starts with the most fundamental step: externalizing intent from conversation into documents, then using structure to eliminate ambiguity.

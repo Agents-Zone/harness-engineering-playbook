@@ -73,13 +73,11 @@ Vibe Codingは出発点だ。フィーリングでプロンプトを書き、AI�
 
 ### Part I: 信頼性あるAgent Programming（1→10倍）
 
-* [信頼性あるデリバリーの出発点: 仕様](chapters/02-specification.md)
-  * [入力が出力を決める: Agent時代のボトルネックが仕様である理由](chapters/02a-why-spec.md)
-  * [機械のための操作マニュアル: 機械可読な仕様とは何か](chapters/02b-machine-readable-spec.md)
-  * [書いた後にどう検証するか: コーディング前にDoc Testingでギャップを発見する](chapters/02c-doc-testing.md)
-  * [仕様は明確なのに出力が抜け落ちる: 暗黙知の外在化](chapters/02d-tacit-knowledge.md)
-  * [複数のソースが矛盾する: Trust Ringsと裁定ルール](chapters/02e-trust-rings.md)
-  * [仕様も腐る: 障害モードと継続的メンテナンス](chapters/02f-spec-decay.md)
+* [仕様：Agentとの意図アラインメント](chapters/02-specification.md)
+  * [意図アラインメント：Vibe Codingはなぜ失敗するのか](chapters/02a-intent-alignment.md)
+  * [構造で意図を伝える：階層化と次元](chapters/02b-structured-intent.md)
+  * [実行可能なSpecをイテレーションで作る](chapters/02c-iterative-spec.md)
+  * [実践：AILock-Step Feature Workflow](chapters/02d-case-study.md)
 * [信頼性あるデリバリーのバックボーン: 自動品質管理](chapters/03-verification.md)
   * [ウィッシュリストから実行可能な制約へ: Test First](chapters/03a-test-first.md)
   * [AIがコードもテストも書く: 共謀問題](chapters/03b-collusion.md)
