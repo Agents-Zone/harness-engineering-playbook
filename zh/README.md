@@ -73,13 +73,10 @@ Vibe Coding 是起点：凭感觉写 prompt，让 AI 生成代码，能跑就行
   * [用结构传达意图：分层与维度](chapters/02b-structured-intent.md)
   * [迭代出一份可执行的 Spec](chapters/02c-iterative-spec.md)
   * [实践：AILock-Step Feature Workflow](chapters/02d-case-study.md)
-* [可靠交付的保障：自动化质量控制](chapters/03-verification.md)
-  * [从愿望清单到可执行约束：测试先行](chapters/03a-test-first.md)
-  * [AI 写代码又写测试：共谋问题](chapters/03b-collusion.md)
-  * [什么样的测试最难被作弊：Trophy 测试模型](chapters/03c-trophy-testing.md)
-  * [不是写完再查，是边写边查：执行过程中的持续反馈](chapters/03d-continuous-feedback.md)
-  * [产出速度太快验不过来：用 Agent 验 Agent](chapters/03e-adversarial-verification.md)
-  * [那我干什么：从审查代码到设计验证体系](chapters/03f-new-role.md)
+* [验证：确保代码忠实于规约](chapters/03-verification.md)
+  * [测试基建前置：把 Spec 变成可执行约束](chapters/03a-test-first.md)
+  * [Code Review：补位测试覆盖不到的意图漂移](chapters/03b-code-review.md)
+  * [实践：AILock-Step 的验证链路](chapters/03c-practice.md)
 
 ### 卷二：规模化 Agent 开发 (10→100x)
 

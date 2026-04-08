@@ -9,13 +9,10 @@
   * [構造で意図を伝える：階層化と次元](chapters/02b-structured-intent.md)
   * [実行可能なSpecをイテレーションで作る](chapters/02c-iterative-spec.md)
   * [実践：AILock-Step Feature Workflow](chapters/02d-case-study.md)
-* [信頼性あるデリバリーのバックボーン：自動品質管理](chapters/03-verification.md)
-  * [ウィッシュリストから実行可能な制約へ: Test First](chapters/03a-test-first.md)
-  * [AIがコードもテストも書く: 共謀問題](chapters/03b-collusion.md)
-  * [どのテストが最もごまかしにくいか: Trophy Testingモデル](chapters/03c-trophy-testing.md)
-  * [終わってから確認ではなく、やりながら確認: 実行中の継続的フィードバック](chapters/03d-continuous-feedback.md)
-  * [出力が速すぎてレビューが追いつかない: AgentでAgentを検証する](chapters/03e-adversarial-verification.md)
-  * [では何をすべきか: コードレビューから検証システム設計へ](chapters/03f-new-role.md)
+* [検証：コードが仕様に忠実であることを確保する](chapters/03-verification.md)
+  * [テスト基盤の前倒し：Specを実行可能な制約に変える](chapters/03a-test-first.md)
+  * [Code Review：テストでは捕捉できない意図ドリフトを補う](chapters/03b-code-review.md)
+  * [実践：AILock-Stepの検証パイプライン](chapters/03c-practice.md)
 * [体制もイテレーションが必要：仕様と検証の進化](chapters/evolution-v1.md)
 
 ### 第二巻：Agent開発のスケーリング（5-10x → 100x）
