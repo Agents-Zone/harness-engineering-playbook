@@ -10,6 +10,12 @@ This is a trilingual HonKit book with content in `en/`, `zh/`, and `ja/` directo
 
 `LANGS.md` at root registers available languages for HonKit.
 
+## Git Workflow
+
+- The book content lives on the **`gitbook`** branch, NOT `main`. The `main` branch contains a separate project (ai-coding-practices-framework).
+- All PRs for book content must target `gitbook` as the base branch.
+- Draft work branches should be created from `gitbook`: `git checkout -b feat/xxx origin/gitbook`
+
 ## Translation Rules
 
 When translating content between languages:
