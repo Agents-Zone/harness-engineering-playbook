@@ -73,13 +73,10 @@ The book unfolds along a productivity ladder. Chapter 1 analyzes the structural 
   * [Conveying Intent Through Structure: Layers and Dimensions](chapters/02b-structured-intent.md)
   * [Iterating Toward an Executable Spec](chapters/02c-iterative-spec.md)
   * [In Practice: AILock-Step Feature Workflow](chapters/02d-case-study.md)
-* [The Backbone of Reliable Delivery: Automated Quality Control](chapters/03-verification.md)
-  * [From Wish List to Executable Constraints: Test First](chapters/03a-test-first.md)
-  * [AI Writes Code and Tests: The Collusion Problem](chapters/03b-collusion.md)
-  * [What Kind of Tests Are Hardest to Game: The Trophy Testing Model](chapters/03c-trophy-testing.md)
-  * [Not Check After Done, but Check While Doing: Continuous Feedback During Execution](chapters/03d-continuous-feedback.md)
-  * [Output Too Fast to Review: Using Agents to Verify Agents](chapters/03e-adversarial-verification.md)
-  * [So What Do I Do: From Reviewing Code to Designing Verification Systems](chapters/03f-new-role.md)
+* [Verification: Ensuring Code Stays Faithful to the Spec](chapters/03-verification.md)
+  * [Test Infrastructure First: Turning Specs into Executable Constraints](chapters/03a-test-first.md)
+  * [Code Review: Catching Intent Drift That Tests Miss](chapters/03b-code-review.md)
+  * [In Practice: AILock-Step's Verification Pipeline](chapters/03c-practice.md)
 
 ### Part II: Scaling Agent Development (10→100x)
 
