@@ -5,3 +5,7 @@
 这一章不同。当多个人类需要协作来指挥各自的 Agent 军团时，问题进入了组织设计领域。传统的 TL 带 5-8 个 IC 的团队结构，是为人类执行者设计的。Agent 接管执行层之后，这套架构的设计假设被推翻了。
 
 这是一个 open problem。行业里的先行者正在用不同的方式探索，有 PingCAP 黄东旭的"头狼+狼群"模型，有社区提出的 Product Tri-Ownership 框架，也有更温和的培训模式。本章不提供标准答案，而是分析传统架构为什么失效，提供组织设计的原则，并介绍当前已有的探索。
+
+---
+
+*Harness Engineering Playbook · [AgentsZone](https://agentszone.ai) Community*

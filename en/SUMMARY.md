@@ -1,17 +1,19 @@
 # Table of Contents
 
-* [Harness Engineering Playbook](README.md)
+* [Preface](preface.md)
 * [Introduction: From Vibe Coding to Harness Engineering](chapters/00-introduction.md)
+* [Structural Characteristics of AI and Engineering Challenges](chapters/01-framework.md)
+  * [How Agents Work](chapters/01a-how-agents-work.md)
+  * [Structural Characteristics of AI](chapters/01b-characteristics.md)
+  * [Why Your AI Transformation Is Stuck](chapters/01c-why-transformation-fails.md)
 
 ### Part I: Reliable Agent Programming (1.5x → 5-10x)
 
-* [The Starting Point of Reliable Delivery: Specification](chapters/02-specification.md)
-  * [Input Determines Output: Why the Bottleneck in the Agent Era Is Specification](chapters/02a-why-spec.md)
-  * [An Operations Manual for Machines: What Machine-Readable Specs Look Like](chapters/02b-machine-readable-spec.md)
-  * [How to Verify After Writing: Finding Gaps Before Coding with Doc Testing](chapters/02c-doc-testing.md)
-  * [Spec Is Clear but Output Still Misses Things: Externalizing Tacit Knowledge](chapters/02d-tacit-knowledge.md)
-  * [Multiple Sources Contradict Each Other: Trust Rings and Adjudication Rules](chapters/02e-trust-rings.md)
-  * [Specs Rot Too: Failure Modes and Continuous Maintenance](chapters/02f-spec-decay.md)
+* [Specification: Aligning Intent with the Agent](chapters/02-specification.md)
+  * [Intent Alignment: Why Vibe Coding Fails](chapters/02a-intent-alignment.md)
+  * [Conveying Intent Through Structure: Layers and Dimensions](chapters/02b-structured-intent.md)
+  * [Iterating Toward an Executable Spec](chapters/02c-iterative-spec.md)
+  * [In Practice: AILock-Step Feature Workflow](chapters/02d-case-study.md)
 * [The Backbone of Reliable Delivery: Automated Quality Control](chapters/03-verification.md)
   * [From Wish List to Executable Constraints: Test First](chapters/03a-test-first.md)
   * [AI Writes Code and Tests: The Collusion Problem](chapters/03b-collusion.md)
