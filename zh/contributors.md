@@ -11,7 +11,9 @@
 
 | 贡献者 | 贡献内容 |
 |--------|---------|
-| 胥克谦 (chosen-ox) | 文档测试、上下文推理污染、敏捷-瀑布模型、任务级交接文档 |
+| 胥克谦 | 文档测试、上下文推理污染、敏捷-瀑布模型 |
+| Jiakun Fan (chosen-ox) | 任务级交接文档 |
+| 杨正武 (Ryan Yang) | AILock-Step 框架、采访素材 |
 | Jin Yu (imcom) | CI/CD 反馈通道、可观测性章节 |
 | ssql2014 | Session 工程化章节 |
 | stock-programmer | Agent 可编译 PRD 架构 |
