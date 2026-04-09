@@ -22,7 +22,7 @@ The frame of reference shifts from the code to the spec. The core inputs for the
 
 This means the review output is not a vague list of "suggested improvements" but a spec-consistency report: which acceptance criteria have been met, which show deviations, and which are missing entirely. This report maps directly to the spec's structure, so human reviewers can focus on the deviated and missing items without reading code line by line.
 
-## The Coding Agent and the Reviewing Agent Must Be Independent
+## Coding and Reviewing Agents Must Be Independent
 
 If the same Agent first writes the code and then reviews its own output, the context accumulated during coding will influence its judgment. It decided to rename Order to Transaction while writing code, and the reasoning behind that decision remains in its context. During review, it sees Transaction, the reasoning in its context tells it this naming is justified, and it will not re-evaluate against the spec. The backend missed a validation, but the Agent remembers it already handled it on the frontend, that memory is in its context, and it will not question whether the backend also needs it. The review becomes a confirmation of the reasoning already present from the coding process, not an independent verification against the spec.
 

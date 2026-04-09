@@ -8,13 +8,11 @@ These two issues share a common trait: the code itself was well-written, with re
 
 Specification solves "telling the Agent what to do." Verification solves "whether the Agent actually did it."
 
-## The Industry Has Invested Heavily in Verification
+## Intent Drift: The Blind Spot of Existing Tools
 
 We are not the only ones who noticed this problem. Anthropic explicitly stated in a series of articles on harness design that separating generation from evaluation is the most effective lever for quality control. Industry consensus has formed: verification is one of the most critical components of harness engineering.
 
 Various frameworks have made extensive attempts in this direction. BMAD designed a three-tier information-asymmetric code review system, where different reviewers see different scopes of information to reduce confirmation bias. Spec Kit uses constitution governance and 10 types of ambiguity detection to intercept quality issues at the spec stage. Both OpenAI and Anthropic have released multi-Agent parallel code review systems and eval frameworks. Community discussions around TDD, Trophy testing, and adversarial review have never stopped.
-
-## But These Tools Cannot Solve the Core Problem
 
 If you have used these verification tools at scale in real projects, you will have noticed something: code can pass all linting, all unit tests, all adversarial reviews, yet the functionality it implements is not what the spec described.
 

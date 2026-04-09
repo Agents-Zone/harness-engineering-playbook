@@ -125,7 +125,7 @@ This report demonstrates exactly how code review covers the blind spots that tes
 
 Scope checking is another area tests cannot cover. The Agent modified login.vue, but tests only cover OKR-related pages and never touch the login module. The review Agent, scanning the diff, identified this change as outside the spec's scope and flagged it for human judgment.
 
-## Closing the Loop
+## The Complete Verification Chain
 
 All three steps complete a chain: the contract defines boundaries, tests build executable constraints on those boundaries, and code review covers the intent drift that tests cannot reach. What humans need to review is not the code itself, but two reports: the test results (is the behavior correct?) and the spec consistency report (is the intent aligned?). Both reports map directly to the spec's structure, focusing on deviations and gaps.
 

@@ -4,7 +4,7 @@ The previous two sections established a methodological framework: information sh
 
 A key mental model: a spec is not written in one sitting. It is iterated into existence. You do not need to sit down and produce a perfect spec in a single pass. You write a starting point, the Agent expands it, cross-validation exposes problems, you fix them, validate again, and repeat until convergence. The whole process is more like a structured dialogue between you and the Agent than a one-sided document-writing exercise.
 
-## The Starting Point
+## The Starting Point: A User Story
 
 The earlier discussion covered four information layers: vision, architecture, feature, and task. The spec iteration described here operates at the feature and task layers. It assumes the upstream work is already done: the product vision has been set, the system architecture has been chosen, and this high-level information has been captured in the project context. The derivation process from vision to user journey to concrete requirements belongs to the domain of product methodology, which this book does not cover. But that process is equally important. It determines whether the requirement you receive at the feature layer is itself sound.
 
@@ -14,7 +14,7 @@ Writing this sentence requires three decisions: who it is for (blog authors, not
 
 This sentence is not the final spec. It is the seed for iteration. You do not need to figure out where the search box goes, how results are sorted, or what happens with empty results at this stage. Those details will surface during subsequent iterations.
 
-## Agent Expansion
+## Agent Expands the Spec Draft
 
 You hand the user story and a rough scope to the Agent and ask it to generate a spec draft.
 
@@ -24,7 +24,7 @@ Ryan's `/new-feature` skill is one implementation of this process. The Agent loa
 
 This draft will almost certainly have issues. Maybe it missed a boundary case you care about. Maybe its understanding of the search scope differs from yours (you intended title-only search, it assumed full-text). Maybe the impact analysis overlooked a module that should have been mentioned. These issues are normal at this stage. The next step will surface them.
 
-## Cross-Validation Exposes Problems
+## Cross-Validation Detects Drift
 
 You ask the Agent to derive a task list from the spec: what specific work needs to be done to complete this feature, which files change, and in what order. Then derive a checklist from the task list: what to check after completion and what counts as passing.
 
@@ -38,13 +38,13 @@ The task list includes a step: "Modify the article listing page's sort logic to 
 
 When the three documents are consistent, with no contradictions and no unexpected new content, it means the Agent saw the same thing from three different angles.
 
-## Correction and Re-Validation
+## Document-Level Correction
 
 Problems found through cross-validation point directly to what needs changing in the spec. You fill in missing acceptance scenarios, clarify ambiguous descriptions, and add overlooked constraints. Then ask the Agent to regenerate the task list and checklist from the corrected spec, and review once more.
 
 This loop usually converges within one or two rounds. Each round costs little. It is all document-level work: edit a few lines of the spec, have the Agent regenerate two documents, spend a few minutes comparing. But the problems these rounds catch, if left to the coding phase, could take hours or even days to fix.
 
-## Splitting When Requirements Are Too Large
+## Splitting by User Value
 
 Sometimes you will find that iteration does not converge. You run two or three rounds of cross-validation, fix one contradiction only to see a new one appear. The spec keeps getting longer, acceptance scenarios keep multiplying, and dependencies between scenarios grow increasingly complex.
 
@@ -62,7 +62,7 @@ Splitting by technical layer (feat-auth-db, feat-auth-api, feat-auth-ui) does no
 
 After splitting, each sub-feature's spec enters the same iteration loop: Agent expansion, cross-validation, correction, until convergence. There is one additional check: alignment between the sub-spec and the original requirement. If the original requirement mentioned OAuth login but the split feat-auth-login spec only covers username/password login, cross-validation will expose this omission at the checklist stage.
 
-## Convergence
+## Criteria for Spec Readiness
 
 Cross-validation no longer produces contradictions. The three documents describe the same thing from three different angles. The spec is ready for execution.
 
@@ -70,7 +70,7 @@ This does not mean the spec is perfect. Edge cases you never thought of will not
 
 If a dimension genuinely has no content (for example, this feature does not affect any existing modules), write "None" explicitly. Leaving a field blank and writing "None" mean different things. A blank field implies the question was never considered, and the Agent may treat it as an oversight. "None" implies the question was considered, and the conclusion is that there is nothing.
 
-## The Human Role in Iteration
+## Intent Alignment: A Judgment Only Humans Can Make
 
 In the iteration loop described above, the Agent does most of the work: expanding the spec, generating the task list, generating the checklist, running consistency checks. But there is one step only a human can do.
 
@@ -90,7 +90,7 @@ The Agent excels at a different kind of checking: cross-document consistency. Th
 
 The division of labor in the iteration loop works like this: the Agent handles expansion, generation, and consistency checking (structural, automatable work). The human handles intent alignment judgment (semantic work that only the intent owner can do).
 
-## How Heavy Should This Loop Run?
+## Match Iteration Depth to Rework Cost
 
 The iteration loop described above has a full-fledged form: write intent, Agent expansion, cross-validation, correction or splitting, human review of user stories, re-validation until convergence. But not every task deserves the full loop.
 

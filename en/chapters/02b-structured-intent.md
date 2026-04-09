@@ -1,6 +1,6 @@
 # Communicating Intent with Structure: Layers and Dimensions
 
-## From Conversation to Documents
+## Documenting Intent
 
 The previous section diagnosed three Vibe Coding failure modes: early instructions crowded out of the attention window, contradictory instructions with no priority ordering, and compaction actively deleting information. All three problems share a common structural cause: intent lives inside the conversation.
 
@@ -18,7 +18,7 @@ But natural language documents introduce a new problem: ambiguity. You write a d
 
 The solution to ambiguity is not to write more natural language. A three-page description may contain more ambiguity than a three-line one, because more sentences mean more places that can be interpreted differently. What actually works is getting the structure right. To understand what the right structure looks like, you first need to understand the nature of the information itself.
 
-## The Natural Layering of Information
+## Four Layers of Information and On-Demand Loading
 
 Think about how human teams collaborate.
 
@@ -56,7 +56,7 @@ To determine which layer a piece of information belongs to, look at two indicato
 
 Two signals help you tell whether your layering is right. If you find yourself repeating the same information in every feature spec (for example, reminding the Agent "we use REST APIs, do not use GraphQL" every single time), that information should be promoted to the project context layer. Write it once. Conversely, if your project context has ballooned to over a thousand lines and costs the Agent a large chunk of context space every time it loads, there are too many low-level details that should be pushed down into specific feature specs.
 
-## Three Dimensions at Every Layer
+## Intent, Acceptance, Constraints
 
 Layering answers "why information needs to be split" and "which layer each piece belongs to." The next question is: what content should each layer contain?
 
@@ -128,7 +128,7 @@ The essence of this method does not depend on the specific form of "three docume
 
 Forms can differ. The principle is the same: every time new lower-level information is generated there is a risk of drift, and you need a mechanism to detect it at that boundary.
 
-## On Information Volume and Ambiguity
+## Eliminating Ambiguity with Structure
 
 The preceding content might give the impression that eliminating ambiguity requires writing more content and filling more fields. This misconception is worth clarifying explicitly.
 

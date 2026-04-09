@@ -2,7 +2,7 @@
 
 What you want the software to do is your intent. What text is actually in the Agent's context window is the information it receives. The gap between the two is the intent alignment problem. The wider the gap, the further the output drifts. When Agent-generated code isn't what you wanted, the issue is usually not model capability but that your intent wasn't accurately conveyed into the context. The conversational mode of Vibe Coding causes this gap to widen with every iteration. This chapter starts by diagnosing this problem, establishes a methodological framework of information layering and structured dimensions, then shows how to use that framework to iteratively produce a spec that an Agent can execute, and finally walks through a real project workflow that ties everything together.
 
-## Starting with Vibe Coding
+## Three Structural Failures of Conversation
 
 You have probably been through a phase like this. You open an Agent, describe a requirement in natural language, and working code appears within minutes. You run it, tweak it a couple of times, and it works. You start handing more and more tasks to the Agent. In one afternoon you ship what used to take two days. The initial experience of Vibe Coding is genuinely good.
 
@@ -28,7 +28,7 @@ These three failure modes look like different phenomena: constraints ignored, in
 
 Your intent lives inside the conversation. And conversation is a medium that expands, contradicts itself, and actively discards content. With every additional round, earlier intent gets pushed further away. When the conversation grows long enough, the system actively deletes some of it. The intent alignment between you and the Agent rests on a foundation that is constantly eroding.
 
-## The Engineering Nature of Intent Alignment
+## Information Architecture Under Context Constraints
 
 The introduction covered three structural characteristics of Agents: non-determinism, no persistent memory, and inability to self-verify. For the specific problem of "how to convey intent to an Agent," the most critical limitation comes from combining two of these: limited context (an extension of no persistent memory) and uneven attention (which affects the actual reception quality of information).
 
