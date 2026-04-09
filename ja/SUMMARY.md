@@ -14,6 +14,7 @@
   * [Code Review：テストでは捕捉できない意図ドリフトを補う](chapters/03b-code-review.md)
   * [実践：AILock-Stepの検証パイプライン](chapters/03c-practice.md)
 * [体制もイテレーションが必要：仕様と検証の進化](chapters/evolution-v1.md)
+* [第一巻の振り返り：Closed Loopから進化へ](chapters/v1-conclusion.md)
 
 ### 第二巻：Agent開発のスケーリング（5-10x → 100x）
 

@@ -14,6 +14,7 @@
   * [Code Review: Catching Intent Drift That Tests Miss](chapters/03b-code-review.md)
   * [In Practice: AILock-Step's Verification Pipeline](chapters/03c-practice.md)
 * [Systems Need Iteration Too: Evolving Specs and Verification](chapters/evolution-v1.md)
+* [Part I Recap: From Closed Loop to Evolution](chapters/v1-conclusion.md)
 
 ### Part II: Scaling Agent Development (5-10x → 100x)
 
