@@ -1,13 +1,9 @@
 # Bottleneck Shift: From Code to Organization
 
-The traditional software team's bottleneck is at the execution layer: code is not written fast enough, not enough features are delivered. The solution is to add people. Each new engineer brings incremental coding capacity, and team output grows with headcount.
+> 🚧 This section is under development.
 
-Agents make execution cheap. One engineer plus Agents can increase coding output by an order of magnitude. But the cost of directing and verifying has not decreased in sync. Defining requirements still requires humans to understand the business. Designing architecture still requires human engineering judgment. Verifying that output matches intent still requires human review. These tasks cannot simply be handed off to Agents.
+The traditional software team's bottleneck lies at the execution layer: code is not written fast enough, and feature delivery cannot keep pace with demand. After Agents eliminate the execution bottleneck, new bottlenecks emerge at the organizational layer. Review queues pile up, and reviewer time becomes a scarce resource. Deployment windows are designed for the human pace, and twice-a-day release frequency cannot handle Agent output speed. Cross-team coordination still depends on meetings and documents, and the Agent's output speed amplifies the cost of coordination delays many times over. Requirements decomposition granularity cannot keep up with how fast Agents consume work, and product managers become the new bottleneck. The common root cause of all these problems: the execution layer accelerated, but the organizational layer above it did not change to match.
 
-The bottleneck has shifted from "writing code" to "organizing humans." The team's limiting factor is no longer how many people are writing code, but how humans organize themselves to direct and verify Agent output.
+---
 
-PingCAP CTO Ed Huang observed a deeper phenomenon in practice. The workflows and best practices of top vibe coders are not the same. Each person has developed their own way of directing Agents: different prompt strategies, different verification workflows, different tool combinations. Two top vibe coders struggle to collaborate within the same module; "the same territory cannot easily accommodate two alpha wolves, resulting in 1+1 < 2."
-
-This means the traditional linear scaling model of "more people equals more output" has completely broken down. Not just because Agents changed output speed, but because the way humans direct Agents is highly personalized and difficult to standardize and compose.
-
-The organizational design challenge thus becomes: how to let multiple humans each efficiently command their own Agent fleets while ensuring their outputs integrate into a coherent system?
+*Harness Engineering Playbook · [AgentsZone](https://agentszone.ai) Community*

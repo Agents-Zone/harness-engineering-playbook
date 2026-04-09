@@ -4,7 +4,7 @@ AIと人間を組織化し、信頼性の高いソフトウェアデリバリー
 
 **AgentsZone コミュニティによる共同著作** | 編集: 傅全志、馬驰
 
-> **注意: 初期ドラフト** 本書はアーキテクチャ検証段階にあります。序文と目次構成はおおむね固まっており、全体的なフレームワークに対するフィードバックを歓迎します。各章の内容はAIアシストによる初稿であり、詳細、具体例、読みやすさの磨き込みが不足しています。これらは今後のバージョンで、実践者コントリビューターにより順次補完・改善されます。
+> **📖 初期ドラフト** 第一巻（規約、検証、進化）は初稿が完成しています。第二巻と第三巻は執筆中で、目次構成と核心的な論点は確定しています。本書のテーマに興味がある方、または実践経験を共有いただける方は、[こちらからご連絡ください](contributors.md)。
 
 ## Agent Coding: 1.5倍か100倍か
 
@@ -77,41 +77,32 @@ Vibe Codingは出発点だ。フィーリングでプロンプトを書き、AI�
   * [テスト基盤の前倒し：Specを実行可能な制約に変える](chapters/03a-test-first.md)
   * [Code Review：テストでは捕捉できない意図ドリフトを補う](chapters/03b-code-review.md)
   * [実践：AILock-Stepの検証パイプライン](chapters/03c-practice.md)
-* [体制もイテレーションが必要：仕様と検証の進化](chapters/evolution-v1.md)
+* [進化：規約と検証の継続的イテレーション](chapters/evolution-v1.md)
 * [第一巻の振り返り：Closed Loopから進化へ](chapters/v1-conclusion.md)
 
 ### Part II: Agent開発のスケーリング（10→100倍）
 
-* [Agentを自律稼働させる: 分解、コンテキスト、メモリ](chapters/04-long-running.md)
-  * [手を離したら何が起きるか: Context Wall](chapters/04a-context-wall.md)
-  * [大きなタスクをAgentサイズに切る: タスク分解](chapters/04b-task-decomposition.md)
-  * [コンテキストは多ければ良いわけではない: Context Engineering](chapters/04c-context-engineering.md)
-  * [セッション終了、知識はどこへ: クロスセッションメモリエンジニアリング](chapters/04d-memory.md)
-  * [タスクが完了しなかったとき: タスクレベルの引き継ぎドキュメント](chapters/task-handoff/04d1-task-handoff.md)
-  * [セッションはチャットログではない: 実行単位のエンジニアリング](chapters/04e-session.md)
-  * [手取り足取りから自律へ: 実行モードの転換](chapters/04f-letting-go.md)
-* [マルチAgent並列処理: 分離と統合](chapters/05-multi-agent.md)
-  * [2つのAgentを同時に: 競合と分離](chapters/05a-isolation.md)
-  * [個別には正しいが、合わせると爆発する: 契約と統合](chapters/05b-integration.md)
-  * [飛行機を飛ばす前に滑走路を作る: Platform Engineering First](chapters/05c-platform.md)
-    * [ミリ秒フィードバック: 静的解析とコード標準](chapters/05c1-linters.md)
-    * [秒〜分フィードバック: フィードバックチャネルとしてのCI/CD](chapters/05c2-cicd.md)
-    * [分〜日フィードバック: Observability](chapters/05c3-observability.md)
-    * [ビジネス品質の測定: Benchmark駆動フィードバックループ](chapters/05c4-benchmark.md)
-    * [Environment as Code: 信頼性あるフィードバックの基盤としての再現性](chapters/05c5-iac.md)
-    * [シグナルが赤になったとき: Agentのトラブルシューティング能力](chapters/05c6-troubleshooting.md)
-  * [何体まで管理できるか: Span of Control](chapters/05d-span.md)
+* [Agentを自律稼働させる：分解、コンテキスト、メモリ](chapters/04-long-running.md)
+  * [コンテキスト崩壊：長期タスクが制御不能になる構造的理由](chapters/04a-context-wall.md)
+  * [タスク分解：実行ブロックの粒度を制御する](chapters/04b-task-decomposition.md)
+  * [Context Engineering：Agentが何を見るかを決める](chapters/04c-context-engineering.md)
+  * [クロスセッション永続化：メモリと引き継ぎ](chapters/04d-memory.md)
+* [マルチAgent並列処理：分離と統合](chapters/05-multi-agent.md)
+  * [分離：Agent間の並行競合を防ぐ](chapters/05a-isolation.md)
+  * [統合：独立した成果物の一貫性を確保する](chapters/05b-integration.md)
+  * [Platform Engineering：多層フィードバック基盤の構築](chapters/05c-platform.md)
+* [進化：手動巡回から自動化ドリフト検知へ](chapters/evolution-v2.md)
 
 ### Part III: 100倍組織のガバナンス
 
-* [複数人の協働: ハイブリッドチームの組織設計](chapters/06-hybrid-team.md)
-  * [既存のチーム構造がもう機能しない理由](chapters/06a-why-old-structure-fails.md)
-  * [ボトルネックの移動: コードから組織へ](chapters/06b-bottleneck-shift.md)
-  * [実行ではなくガバナンスを軸に役割を再設計する](chapters/06c-new-roles.md)
-  * [プロセスをAgentの速度に合わせる](chapters/06d-process-speed.md)
-  * [Agentを投入する前に境界を定義する: Conway's Lawは今も適用される](chapters/06e-conway.md)
-  * [銀の弾丸はないが、原則はある](chapters/06f-principles.md)
-* [新時代の組織資産](chapters/07-beyond.md)
+* [組織再構築：Agentが協働の前提を変えるとき](chapters/06-hybrid-team.md)
+  * [既存構造が機能しなくなる理由](chapters/06a-why-old-structure-fails.md)
+  * [ボトルネックの移動：コードから組織へ](chapters/06b-bottleneck-shift.md)
+  * [プロセスをAgentの速度に合わせる](chapters/06c-process-speed.md)
+* [役割の再定義：コードを書くことから検証体制の設計へ](chapters/07-role-redefinition.md)
+  * [ガバナンスを軸に役割を再設計する](chapters/07a-new-roles.md)
+  * [暗黙の調整を明示的な仕組みに置き換える](chapters/07b-coordination.md)
+* [進化：組織資産と新たなモート](chapters/evolution-v3.md)
 
 ---
 

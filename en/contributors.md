@@ -16,9 +16,12 @@ This book is a collective work by the [AgentsZone](https://agentszone.ai) commun
 | ssql2014 | Session engineering chapter |
 | stock-programmer | Agent-compilable PRD architecture |
 
-## How to Contribute
+## Contact Us
 
-This book is continuously evolving. If you have practical experience to share or suggestions for improving existing content, you are welcome to contribute through the [AgentsZone](https://agentszone.ai) community.
+- Quanzhi Fu: [Homepage](https://fqzz2000.github.io/) | [Email](mailto:fqzz2000@outlook.com)
+- Community: [AgentsZone](https://agentszone.ai)
+
+If you're interested in this book's topics, have practical experience to share, or have suggestions for existing content, we'd love to hear from you.
 
 ---
 

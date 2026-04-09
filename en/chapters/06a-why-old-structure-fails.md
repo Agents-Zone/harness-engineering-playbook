@@ -1,15 +1,9 @@
-# Why Your Team Structure No Longer Works
+# Why the Old Structure No Longer Works
 
-The typical structure of a traditional software team is a technical lead managing five to eight engineers. The tech lead assigns tasks, makes technical decisions, and reviews code. Engineers are divided by tech stack: frontend, backend, testing, operations. Each person's core job is writing code. This structure has worked for decades, underpinned by a set of implicit design assumptions.
+> 🚧 This section is under development.
 
-The first assumption: more people equals more output. Need more features? Add more engineers. Output scales roughly linearly with headcount. The second assumption: the tech lead's review bandwidth can cover the team's output. An engineer writes a few hundred lines of code per day; the tech lead reviews five to eight people's output, and the pace roughly matches. The third assumption: division by tech stack is efficient. Frontend engineers focus on React, backend engineers focus on Go, test engineers focus on test automation. Specialization yields efficiency.
+Traditional teams are organized by function: two frontend engineers, three backend engineers, one QA. The implicit assumption behind this structure is that each person's output capacity is roughly comparable and workload can be evenly distributed by headcount. When Agents widen the individual output gap from two times to ten times, that assumption no longer holds. Two backend engineers at the same level: one uses Agents and completes a week's worth of work in a day, the other still writes code line by line the traditional way. Under the old structure's task allocation, the former has idle capacity while the latter cannot keep up. Those who do not use Agents feel anxious and marginalized. Those who use Agents effectively feel the mismatch between their contribution and their compensation. The problem is not individual attitude. It is that the design premises of the organizational structure have changed.
 
-When engineers' work shifts from "writing code yourself" to "directing Agents to write code," all three assumptions fail simultaneously.
+---
 
-The tech lead becomes a bottleneck. Each engineer brings their own Agent fleet, and a single day's output might equal a past week's output. The tech lead's review bandwidth has not scaled in sync. The daily code volume produced by five engineers each commanding their Agents far exceeds one person's review capacity. The result is either review quality drops (rubber-stamping) or review becomes the chokepoint of the entire workflow (code is written but queued waiting for review).
-
-Division by tech stack loses its purpose. An engineer plus an Agent can work across stacks: writing backend APIs in the morning, frontend pages in the afternoon, and integration tests in the evening. Agents are not constrained by tech stack; their output speed is the same across any language and framework. The specialization boundaries drawn by tech stack dissolve in the Agent era.
-
-Traditional processes become a drag. Four-eyes code review requires two people to review every piece of code; the Agent finishes a feature in a day, but scheduling two reviewers takes three days. The change approval board meets once a week; an Agent can deploy ten times a day. Manual deployment and manual testing, processes designed for human execution speed, become active obstacles at Agent speed.
-
-Quality accountability develops a vacuum. In traditional teams, whoever writes the code is responsible for it. In the Agent era, the engineer says "the Agent wrote it," the tech lead says "I cannot review fast enough." The Agent itself has no accountability capacity. Quality responsibility for the code has no clear owner within the organization.
+*Harness Engineering Playbook · [AgentsZone](https://agentszone.ai) Community*

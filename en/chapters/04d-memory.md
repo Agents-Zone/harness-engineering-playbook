@@ -1,27 +1,11 @@
-# Session Over, Where Did the Knowledge Go: Cross-Session Memory Engineering
+# Cross-Session Persistence: Memory and Task Handoff
 
-Task decomposition means a complex project will span multiple sessions. Each time a session ends, the context window is cleared and the Agent's entire working memory resets to zero. The next session starts from a blank slate.
+> 🚧 This section is under development.
 
-Without a memory mechanism, you need to re-explain the project background, current progress, design decisions already made, and pitfalls already encountered to the Agent at the start of every session. This repetitive information transfer is both time-consuming and unreliable, because you may omit certain critical details, and these omissions will cause the Agent to repeat the same mistakes.
+Task decomposition means a project spans multiple sessions. Each time a session ends, the context window is cleared, and everything the Agent accumulated during that session resets to zero. When the next session starts, it is once again a new intern who knows nothing. If every session requires ten-plus minutes to re-inject background context, the efficiency gains from decomposition are consumed by handoff costs.
 
-Skill cards are the core vehicle for solving this problem. Each Agent role is equipped with a Skill card that records the persistent information it needs to know. A minimal Skill card contains the following structure:
+The persistence mechanism operates at two levels. Role-level persistence is implemented through Skill cards. It answers "who am I and what can I do": the project's tech stack, architecture preferences, coding conventions, and common toolchain. This information remains constant across all sessions. Task-level persistence is implemented through handoff documents. It answers "where did the last session leave off, what decisions were made, and what problems were encountered": current progress, completed portions, pending items, and design choices along with their rationale. These two levels work together so the next session can continue from where the previous one stopped, rather than starting from scratch.
 
-```
-skill: Coder
-inputs: [spec.section, test.failures]
-outputs: [pr.diff, test.results]
-definition_of_done: ["All tests green", "PR description maps to spec entries"]
-trust_boundaries: ["Do not change database schema", "Do not modify external API contracts"]
-failure_retry: {retries: 2, strategy: "Narrow change surface + request more context"}
-escalation: "On consecutive failures, escalate to Reviewer and return to spec for clarification"
-```
+---
 
-Skill cards persist across sessions. They serve the function of tacit knowledge carriers in traditional teams. When a new session starts, the Agent loads its corresponding Skill card and immediately obtains its role definition, work boundaries, known handling strategies, and historical lessons. It does not need to start from zero understanding what it should do, what it can do, and what it cannot do.
-
-Beyond role-level Skill cards, project-level knowledge persistence is also needed. Knowledge capture at the end of each session is a critical step: what decisions were made in this session? What new constraints were discovered? What pitfalls were hit? This information needs to be recorded in a structured way and become input for the next session.
-
-An effective approach is to conduct a brief retrospective at the end of each session: what happened? How did outcomes differ from spec and test expectations? Which assumption was wrong? Which Skill card or spec needs updating? The answers to these questions are captured and written back to the Skill cards or the specification system.
-
-Skill cards themselves also need to evolve. As the project progresses, the Agent's role boundaries may shift, new constraints are discovered, and better handling strategies are validated. A Skill card is not a configuration file written once and fixed forever; it is a continuously updated knowledge carrier. When a PR introduces behavioral changes, the corresponding Skill card should be updated in sync. This is the concrete practice of the evolution principle at the knowledge level.
-
-The goal of memory engineering is to make the Agent's hundredth session more efficient than its first. In human teams, this kind of accumulation happens naturally. In Agent-driven teams, it needs to be explicitly engineered.
+*Harness Engineering Playbook · [AgentsZone](https://agentszone.ai) Community*

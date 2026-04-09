@@ -16,9 +16,12 @@
 | ssql2014 | Session 工程化章节 |
 | stock-programmer | Agent 可编译 PRD 架构 |
 
-## 如何贡献
+## 联系我们
 
-本书仍在持续演进中。如果你有实践经验想要分享，或对现有内容有修正建议，欢迎通过 [AgentsZone](https://agentszone.ai) 社区参与贡献。
+- 付权智：[个人主页](https://fqzz2000.github.io/) | [邮箱](mailto:fqzz2000@outlook.com)
+- 社区：[AgentsZone](https://agentszone.ai)
+
+如果你对本书的主题感兴趣，有实践经验想要分享，或对现有内容有修正建议，欢迎联系。
 
 ---
 

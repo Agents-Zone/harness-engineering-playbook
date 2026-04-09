@@ -1,4 +1,4 @@
-# はじめに：Vibe CodingからHarness Engineeringへ
+# はじめに：なぜHarness Engineeringが必要なのか
 
 ## Vibe Codingが壁にぶつかる
 

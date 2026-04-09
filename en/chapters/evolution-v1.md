@@ -1,4 +1,4 @@
-# The System Must Iterate Too: Evolving Specs and Verification
+# Evolution: Continuous Iteration of Specs and Verification
 
 The introduction defined two principles for harness: closed-loop control and continuous evolution. The previous two chapters established the closed loop, using specs to define intent and verification to confirm execution. But we have not yet addressed the second principle.
 
