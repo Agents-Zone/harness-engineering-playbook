@@ -77,6 +77,8 @@ The book unfolds along a productivity ladder. Chapter 1 analyzes the structural 
   * [Test Infrastructure First: Turning Specs into Executable Constraints](chapters/03a-test-first.md)
   * [Code Review: Catching Intent Drift That Tests Miss](chapters/03b-code-review.md)
   * [In Practice: AILock-Step's Verification Pipeline](chapters/03c-practice.md)
+* [Systems Need Iteration Too: Evolving Specs and Verification](chapters/evolution-v1.md)
+* [Part I Recap: From Closed Loop to Evolution](chapters/v1-conclusion.md)
 
 ### Part II: Scaling Agent Development (10→100x)
 

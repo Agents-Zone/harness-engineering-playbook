@@ -77,6 +77,8 @@ Vibe Codingは出発点だ。フィーリングでプロンプトを書き、AI�
   * [テスト基盤の前倒し：Specを実行可能な制約に変える](chapters/03a-test-first.md)
   * [Code Review：テストでは捕捉できない意図ドリフトを補う](chapters/03b-code-review.md)
   * [実践：AILock-Stepの検証パイプライン](chapters/03c-practice.md)
+* [体制もイテレーションが必要：仕様と検証の進化](chapters/evolution-v1.md)
+* [第一巻の振り返り：Closed Loopから進化へ](chapters/v1-conclusion.md)
 
 ### Part II: Agent開発のスケーリング（10→100倍）
 

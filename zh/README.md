@@ -77,6 +77,8 @@ Vibe Coding 是起点：凭感觉写 prompt，让 AI 生成代码，能跑就行
   * [测试基建前置：把 Spec 变成可执行约束](chapters/03a-test-first.md)
   * [Code Review：补位测试覆盖不到的意图漂移](chapters/03b-code-review.md)
   * [实践：AILock-Step 的验证链路](chapters/03c-practice.md)
+* [体系也要迭代：规约与验证的演进](chapters/evolution-v1.md)
+* [卷一回顾：从闭环到演进](chapters/v1-conclusion.md)
 
 ### 卷二：规模化 Agent 开发 (10→100x)
 
