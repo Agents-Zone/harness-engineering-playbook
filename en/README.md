@@ -4,27 +4,27 @@ How to organize AI and humans for reliable software delivery
 
 **AgentsZone Community Collective Work** | Editors: Quanzhi Fu, Chi Ma
 
-> **Warning: Early Draft** This book is in its architecture validation phase. The introduction and table of contents structure are largely in place, and feedback on the overall framework is welcome. Chapter content consists of AI-assisted first drafts that lack detail, examples, and readability polish. These will be supplemented and refined chapter by chapter by practitioner contributors in subsequent versions.
+[AgentsZone](https://agentszone.ai) is a Chinese-language developer community focused on AI engineering practices. Its members span indie developers, startup CTOs, and front-line engineers at major tech companies, united by one thing: they all use AI Agents heavily in real projects to write code and ship software. This book is distilled from hundreds of practice-sharing sessions, every conclusion validated by multiple practitioners.
+
+> **Warning: Early Draft** This book is in its architecture validation phase. The introduction and table of contents structure are largely in place, and feedback on the overall framework is welcome. Chapters still need detail, examples, and readability polish. Practitioner contributors are welcome to help refine them chapter by chapter.
 
 ## Agent Coding: 1.5x or 100x
 
 Over the past two years, the capability frontier of AI coding tools has been continuously expanding. From function-level completion to module-level generation to building entire projects, each generation of models has raised the upper bound of what can be handled. Developers have felt the improvement in sync: writing code is indeed faster, and they have become 1.5x, 2x engineers.
 
-But when teams actually review their delivery data, a puzzling phenomenon emerges. PR counts go up, review times get longer, bug rates climb. The models are stronger, the tools are better, it feels faster, yet the overall productivity gain has fallen far short.
+But delivery data tells a different story: PR counts go up, review times get longer, bug rates climb. The models are stronger, the tools are better, it feels faster — yet overall productivity has not kept up.
 
-Meanwhile, another group of people have produced entirely different results with the same tools. PingCAP CTO Ed Huang used AI to rewrite TiDB's PostgreSQL compatibility layer into near-production-quality Rust code. Pigsty founder Ruohang Feng single-handedly maintains an enterprise-grade PostgreSQL distribution integrating over 460 extensions, routinely orchestrating ten Agents working in parallel. Their productivity gains are measured in tens of multiples, and what they ship is production-deployed, battle-tested code.
+Meanwhile, another group of people have produced entirely different results with the same tools — productivity gains measured in tens of multiples, shipping production-deployed, battle-tested code.
 
-Both sides reflect genuine experiences. You feel like you can only manage 1.5x, and you are right. They achieved tens of multiples and shipped to production, and that is also right. Same models, same tools, so where does the gap come from? Conversations with over a hundred developers in the AgentsZone community have provided a clear answer. This book systematically distills the methodology and engineering practices for going from 1.5x to 100x.
+You feel like you can only manage 1.5x, and you are right. They achieved tens of multiples and shipped to production, and that is also right. Same models, same tools, so where does the gap come from? Conversations with over a hundred developers in the AgentsZone community have provided a clear answer. This book systematically distills the methodology and engineering practices for going from 1.5x to 100x.
 
 If you are a coding beginner or product person who has already vibe-coded a working product and is now thinking about how to iterate and run it reliably in production, Part I on specification and verification will help you directly. If you are a programmer going through the transition from "writing code yourself" to "directing Agents to write code," the productivity ladder throughout this book maps your transition path: from managing a single task well, to managing a fleet of Agents, to redefining your role on the team. If you are a technical leader at an enterprise driving your team's AI-native transformation, Part III on organizational architecture will be directly relevant. Feel free to start from the chapter that matches your current stage.
 
 ## The Difference Comes from Discipline
 
-Back to the core question: where exactly is the gap between 1.5x and 100x?
+Where exactly is the gap between 1.5x and 100x? Not in prompt techniques, not in tool selection, not in model capability — these stay at the operational level and cannot explain why the same tool produces radically different results in different teams' hands.
 
-Mainstream discussion focuses on prompt techniques, tool selection, and model capability comparisons. These have value but remain at the operational level and cannot explain why the same tool produces radically different results in different teams' hands.
-
-Our observation is: the difference comes from engineering discipline. Teams achieving 100x productivity have all built engineering systems that match the characteristics of AI Agents. Teams stuck at 1x are still using systems designed for human practitioners to direct Agents.
+The difference comes from discipline. 100x teams have built engineering systems that match the characteristics of AI Agents; 1x teams are still using systems designed for human practitioners to direct Agents.
 
 The institutional systems accumulated over sixty years of software engineering, including code review, testing strategies, modularization, and team division of labor, were designed around the cognitive characteristics of human practitioners. Human programmers fill in vague requirements with common sense, instinctively slow down for high-risk operations, and accumulate tacit knowledge throughout a project that transfers naturally through collaboration. These capabilities have always resided in the practitioners themselves; process documents never needed to capture them because the practitioners came equipped.
 
@@ -122,5 +122,9 @@ The book unfolds along a productivity ladder. Chapter 1 analyzes the structural 
 * [Organizational Assets for the New Era](chapters/07-beyond.md)
 
 ---
+
+## Acknowledgments
+
+Every chapter of this book has real practitioners behind it. Thank you to everyone named on the [Contributors page](contributors.md) — you contributed cases, corrected mistakes, and shaped vague ideas into actionable methods. Equal thanks to those who asked questions and shared hard-won lessons in community discussions without leaving their names. Your practice is this book's most important raw material.
 
 * [Contributors](contributors.md)
