@@ -1,4 +1,4 @@
-# Introduction: From Vibe Coding to Harness Engineering
+# Introduction: Why You Need Harness Engineering
 
 ## When Vibe Coding Hits a Wall
 

@@ -16,9 +16,12 @@
 | ssql2014 | Sessionエンジニアリング章 |
 | stock-programmer | Agent Compilable PRDアーキテクチャ |
 
-## 貢献方法
+## お問い合わせ
 
-本書は継続的に進化しています。共有すべき実践経験や既存内容への改善提案がある方は、[AgentsZone](https://agentszone.ai)コミュニティを通じてぜひご貢献ください。
+- 傅全志 (Quanzhi Fu)：[ホームページ](https://fqzz2000.github.io/) | [メール](mailto:fqzz2000@outlook.com)
+- コミュニティ：[AgentsZone](https://agentszone.ai)
+
+本書のテーマに興味がある方、実践経験を共有いただける方、既存内容への改善提案がある方は、ぜひご連絡ください。
 
 ---
 

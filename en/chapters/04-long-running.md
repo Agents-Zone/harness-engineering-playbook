@@ -1,10 +1,16 @@
 # Letting Agents Run: Decomposition, Context, and Memory
 
-For the first three chapters, you were still sitting in front of the Agent in a call-and-response mode. The spec is written, the verification system is in place, the single-task closed loop is complete. The natural next step is: let the Agent run on its own. Turn on YOLO mode, give it a big task, go grab a coffee, come back and collect the code.
+> 🚧 This chapter is under development. Below is a summary of the core arguments. Full content will be published in a subsequent release.
 
-The reality is often disastrous. The community is full of YOLO mode failure stories: the Agent ran for two hours, produced thousands of lines of code, but the architectural decisions from the first half were silently overridden in the second half, interface definitions were inconsistent front to back, and the same problem was solved three different ways. The time you spend fixing things exceeds the time it would have taken to write it yourself. Research from Alibaba and Sun Yat-sen University has also validated this: Agent performance systematically degrades in ultra-long-running tasks; the longer the task and the more the context bloats, the more severely output quality declines. [citation]
+Volume 1 solved the quality problem for single interactions: write a clear spec, build a solid verification closed-loop control, and the Agent's single-task output can stabilize at a high level. But there is an implicit assumption here: you have been present the entire time. You personally provide the input for every task, monitor the process, collect the result, and trigger the next step. The Agent's speed is not the bottleneck. Your bandwidth is. Three or four tasks a day is your limit, but the Agent can clearly do more.
 
-The problem is the context wall. The Agent's effective processing capacity has a hard ceiling, and given enough execution time, it will hit that ceiling. But this wall can be climbed. Task decomposition cuts big tasks into Agent-sized chunks, and knowledge persistence keeps critical information alive across session boundaries. Master these techniques and an Agent can work continuously across sessions and days on a project. You transition from being the Agent's real-time conversation partner to being the designer and acceptor of tasks.
+The bottleneck has shifted from Agent capability to human availability. The direction of the solution is clear: transition from being a real-time conversation partner to being a task designer and acceptor. Hand off the task, go do something else, and come back to collect usable results.
+
+The core structural constraint facing this transition is the context window. When the Agent runs autonomously in an agentic loop, the input and output of each iteration are appended to the context. Once the accumulated tokens exceed effective capacity, output quality does not degrade gradually. It collapses off a cliff. This wall is not a bug. It is an inherent characteristic of LLM architecture. Every approach that lets an Agent execute autonomously must work within this constraint.
+
+Addressing this constraint requires capabilities at three levels. Task decomposition determines the granularity of each execution block, ensuring each block completes before context collapse. Context engineering determines what goes into each block's context window, keeping critical constraints from being drowned out by noise. Cross-session persistence solves the memory reset problem between sessions, letting the next session pick up where the previous one left off.
+
+These three capabilities are not independent toolboxes. They collaborate around the same objective: enabling you to hand a multi-hour task to the Agent, walk away, and come back to an acceptable result. Once this is achieved, the efficiency ceiling is no longer how many tasks you can monitor simultaneously, but how many tasks you can design and accept simultaneously.
 
 ---
 

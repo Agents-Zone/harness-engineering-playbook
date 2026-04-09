@@ -4,7 +4,7 @@
 
 **AgentsZone 社区集体创作** | 编者: 付权智，马驰
 
-> **⚠️ 早期草稿** 本书正处于架构验证阶段。引言和目录结构已基本成型，欢迎对整体框架提出反馈。各章节内容为 AI 辅助生成的初稿，缺乏细节、实例和可读性打磨，将在后续版本中由实践贡献者逐章补充完善。
+> **📖 早期草稿** 卷一（规约、验证、演进）已有初稿。卷二和卷三正在撰写中，目录结构和核心论点已确定。如果你对本书的主题感兴趣，或在实践中有相关经验愿意分享，欢迎[联系我们](contributors.md)。
 
 ## Agent Coding：1.5x 还是 100x
 
@@ -77,41 +77,32 @@ Vibe Coding 是起点：凭感觉写 prompt，让 AI 生成代码，能跑就行
   * [测试基建前置：把 Spec 变成可执行约束](chapters/03a-test-first.md)
   * [Code Review：补位测试覆盖不到的意图漂移](chapters/03b-code-review.md)
   * [实践：AILock-Step 的验证链路](chapters/03c-practice.md)
-* [体系也要迭代：规约与验证的演进](chapters/evolution-v1.md)
+* [演进：规约与验证的持续迭代](chapters/evolution-v1.md)
 * [卷一回顾：从闭环到演进](chapters/v1-conclusion.md)
 
 ### 卷二：规模化 Agent 开发 (10→100x)
 
 * [放手让 Agent 跑：分解、上下文与记忆](chapters/04-long-running.md)
-  * [放手之后发生了什么：上下文的墙](chapters/04a-context-wall.md)
-  * [把大任务切成 Agent 能消化的块：任务分解](chapters/04b-task-decomposition.md)
-  * [上下文不是越多越好：上下文工程](chapters/04c-context-engineering.md)
-  * [会话结束了，知识去哪了：跨会话的记忆工程](chapters/04d-memory.md)
-  * [任务没跑完，进度去哪了：任务级交接文档](chapters/task-handoff/04d1-task-handoff.md)
-  * [Session 不是聊天记录：把执行单元工程化](chapters/04e-session.md)
-  * [从陪聊到放手：执行模式的转变](chapters/04f-letting-go.md)
+  * [上下文崩塌：长任务失控的结构性原因](chapters/04a-context-wall.md)
+  * [任务分解：控制每个执行块的粒度](chapters/04b-task-decomposition.md)
+  * [上下文工程：决定 Agent 看到什么](chapters/04c-context-engineering.md)
+  * [跨会话持久化：记忆与任务交接](chapters/04d-memory.md)
 * [多 Agent 并行：隔离与集成](chapters/05-multi-agent.md)
-  * [同时开了两个 Agent：冲突与隔离](chapters/05a-isolation.md)
-  * [各自都对，合在一起就炸：契约与集成](chapters/05b-integration.md)
-  * [搭跑道再放飞机：平台工程先行](chapters/05c-platform.md)
-    * [毫秒级反馈：静态分析与代码规范](chapters/05c1-linters.md)
-    * [秒到分钟级反馈：CI/CD 作为反馈通道](chapters/05c2-cicd.md)
-    * [分钟到天级反馈：可观测性](chapters/05c3-observability.md)
-    * [业务质量的度量：Benchmark 驱动的反馈环](chapters/05c4-benchmark.md)
-    * [环境即代码：可复现性是反馈可靠的前提](chapters/05c5-iac.md)
-    * [当信号亮红灯：Agent 的排错能力](chapters/05c6-troubleshooting.md)
-  * [你能管多少个：管理幅度](chapters/05d-span.md)
+  * [隔离：避免 Agent 间的并发冲突](chapters/05a-isolation.md)
+  * [集成：确保独立产出的一致性](chapters/05b-integration.md)
+  * [平台工程：搭建多层反馈基础设施](chapters/05c-platform.md)
+* [演进：从人工巡检到自动化漂移检测](chapters/evolution-v2.md)
 
 ### 卷三：治理百倍速的组织
 
-* [多人协作：混合团队的组织设计](chapters/06-hybrid-team.md)
-  * [为什么你的团队结构不工作了](chapters/06a-why-old-structure-fails.md)
+* [组织重构：当 Agent 改变了协作的前提](chapters/06-hybrid-team.md)
+  * [为什么旧结构失效了](chapters/06a-why-old-structure-fails.md)
   * [瓶颈转移：从代码到组织](chapters/06b-bottleneck-shift.md)
-  * [围绕治理而非执行重新设计角色](chapters/06c-new-roles.md)
-  * [让流程匹配 Agent 速度](chapters/06d-process-speed.md)
-  * [先定边界再放 Agent：Conway 定律仍然适用](chapters/06e-conway.md)
-  * [没有银弹，但有原则](chapters/06f-principles.md)
-* [新时代的组织资产](chapters/07-beyond.md)
+  * [让流程匹配 Agent 速度](chapters/06c-process-speed.md)
+* [角色重定义：从写代码到设计验证体系](chapters/07-role-redefinition.md)
+  * [围绕治理重新设计角色](chapters/07a-new-roles.md)
+  * [用机制替代人际协调](chapters/07b-coordination.md)
+* [演进：组织资产与新护城河](chapters/evolution-v3.md)
 
 ---
 

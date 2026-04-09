@@ -1,4 +1,4 @@
-# 引言：从 Vibe Coding 到 Harness Engineering
+# 引言：为什么需要 Harness Engineering
 
 ## Vibe Coding 碰壁
 
