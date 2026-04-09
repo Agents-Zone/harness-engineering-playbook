@@ -11,7 +11,9 @@ This book is a collective work by the [AgentsZone](https://agentszone.ai) commun
 
 | Contributor | Contributions |
 |-------------|---------------|
-| Keqian Xu (chosen-ox) | Doc testing, context reasoning contamination, agile-waterfall model, task-level handoff documents |
+| Keqian Xu | Doc testing, context reasoning contamination, agile-waterfall model |
+| Jiakun Fan (chosen-ox) | Task-level handoff documents |
+| Zhengwu Yang (Ryan Yang) | AILock-Step framework, interview material |
 | Jin Yu (imcom) | CI/CD feedback channel, observability chapter |
 | ssql2014 | Session engineering chapter |
 | stock-programmer | Agent-compilable PRD architecture |

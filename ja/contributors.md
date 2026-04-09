@@ -11,7 +11,9 @@
 
 | コントリビューター | 貢献内容 |
 |-------------|---------------|
-| 許克倩 (chosen-ox) | Doc testing、コンテキスト推論汚染、アジャイル・ウォーターフォールモデル、タスクレベル引き継ぎドキュメント |
+| Keqian Xu | Doc testing、コンテキスト推論汚染、アジャイル・ウォーターフォールモデル |
+| Jiakun Fan (chosen-ox) | タスクレベル引き継ぎドキュメント |
+| Zhengwu Yang (Ryan Yang) | AILock-Stepフレームワーク、インタビュー素材 |
 | Jin Yu (imcom) | CI/CDフィードバックチャネル、Observability章 |
 | ssql2014 | Sessionエンジニアリング章 |
 | stock-programmer | Agent Compilable PRDアーキテクチャ |

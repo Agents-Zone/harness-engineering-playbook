@@ -5,12 +5,13 @@
 
 ### Part I: Reliable Agent Programming (1→10x)
 
-* [Specification: Aligning Intent with the Agent](chapters/02-specification.md)
+* [Specification: Aligning Intent with the Agent](chapters/02a-intent-alignment.md)
   * [Intent Alignment: Why Vibe Coding Fails](chapters/02a-intent-alignment.md)
   * [Conveying Intent Through Structure: Layers and Dimensions](chapters/02b-structured-intent.md)
   * [Iterating Toward an Executable Spec](chapters/02c-iterative-spec.md)
   * [In Practice: AILock-Step Feature Workflow](chapters/02d-case-study.md)
 * [Verification: Ensuring Code Stays Faithful to the Spec](chapters/03-verification.md)
+  * [The Anchor of Verification Is the Spec](chapters/03-verification.md)
   * [Test Infrastructure First: Turning Specs into Executable Constraints](chapters/03a-test-first.md)
   * [Code Review: Catching Intent Drift That Tests Miss](chapters/03b-code-review.md)
   * [In Practice: AILock-Step's Verification Pipeline](chapters/03c-practice.md)

@@ -1,5 +1,7 @@
 # Intent Alignment: Why Vibe Coding Fails
 
+What you want the software to do is your intent. What text is actually in the Agent's context window is the information it receives. The gap between the two is the intent alignment problem. The wider the gap, the further the output drifts. When Agent-generated code isn't what you wanted, the issue is usually not model capability but that your intent wasn't accurately conveyed into the context. The conversational mode of Vibe Coding causes this gap to widen with every iteration. This chapter starts by diagnosing this problem, establishes a methodological framework of information layering and structured dimensions, then shows how to use that framework to iteratively produce a spec that an Agent can execute, and finally walks through a real project workflow that ties everything together.
+
 ## Starting with Vibe Coding
 
 You have probably been through a phase like this. You open an Agent, describe a requirement in natural language, and working code appears within minutes. You run it, tweak it a couple of times, and it works. You start handing more and more tasks to the Agent. In one afternoon you ship what used to take two days. The initial experience of Vibe Coding is genuinely good.

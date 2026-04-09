@@ -5,12 +5,13 @@
 
 ### 卷一：可靠的 Agent 编程（1→10x）
 
-* [规约：与 Agent 对齐意图](chapters/02-specification.md)
+* [规约：与 Agent 对齐意图](chapters/02a-intent-alignment.md)
   * [意图对齐：Vibe Coding 为什么失败](chapters/02a-intent-alignment.md)
   * [用结构传达意图：分层与维度](chapters/02b-structured-intent.md)
   * [迭代出一份可执行的 Spec](chapters/02c-iterative-spec.md)
   * [实践：AILock-Step Feature Workflow](chapters/02d-case-study.md)
 * [验证：确保代码忠实于规约](chapters/03-verification.md)
+  * [验证的锚点是规约](chapters/03-verification.md)
   * [测试基建前置：把 Spec 变成可执行约束](chapters/03a-test-first.md)
   * [Code Review：补位测试覆盖不到的意图漂移](chapters/03b-code-review.md)
   * [实践：AILock-Step 的验证链路](chapters/03c-practice.md)
