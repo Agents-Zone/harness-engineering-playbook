@@ -125,7 +125,7 @@ Agent 完成编码后，框架的 `/review-against-spec` skill 启动一个独�
 
 Scope check 也是测试覆盖不到的。Agent 修改了 login.vue，测试只覆盖 OKR 相关的页面，不会触发登录模块。但 review agent 扫描 diff 后发现这个变更不在 spec 范围内，标记出来供人类判断。
 
-## 闭环
+## 验证的完整链路
 
 三步走完：contract 定义了边界，测试在边界上搭建了可执行约束，code review 补位了测试覆盖不到的意图漂移。人类需要看的不是代码，是两份报告：测试结果（行为是否正确）和 spec 一致性报告（意图是否对齐）。两份报告都直接对应 spec 的结构，聚焦在偏离和缺失上。
 

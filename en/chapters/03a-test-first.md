@@ -18,7 +18,7 @@ This is also a prerequisite for multi-Agent parallel development (covered in Cha
 
 With boundaries defined, the next step is to build tests on those boundaries.
 
-## Generating Tests Directly from the Spec and Architecture Documents
+## Generating Tests Before Coding
 
 Test inputs come from two sources: acceptance criteria in the spec, and API contracts in the architecture document. At the time tests are written, business code does not yet exist. This sequencing guarantees that tests are independent of the implementation, serving as a direct translation of the spec's intent rather than being contaminated by implementation details.
 
@@ -30,7 +30,7 @@ Dependencies that do not yet exist are replaced with mocks. Frontend tests use a
 
 Why are integration tests the workhorse for acceptance, rather than unit tests? Integration tests verify whether a user story works end to end, directly corresponding to the intent in the spec. Unit tests verify whether a function returns the correct value, which is an implementation detail too far removed from spec intent. More critically, an Agent can adjust the internal structure of its implementation to make unit tests pass, but fabricating a complete user journey (from API call to database write to return-value verification) is far more difficult. Unit tests are not useless: the Agent is free to write unit tests to support its own development process. But as the basis for acceptance, integration tests are the more reliable signal.
 
-## In-Process Verification: Closing the Loop During Execution
+## Continuous In-Process Verification
 
 Once the test framework is in place, verification becomes part of the execution process, not a post-hoc checking step.
 
@@ -40,7 +40,7 @@ The value of this rhythm lies in compressing the survival time of deviations to 
 
 This closed-loop structure is a projection of the same pattern as the iteration loop from the spec chapter, applied at a different phase. The spec-phase loop is: human writes intent, Agent expands it, cross-validation exposes issues, corrections are made, re-validation follows. The execution-phase loop is: spec defines behavior, tests encode behavior, Agent implements, tests provide feedback, corrections are made, move to the next step. The common trait of both loops is that every step has a feedback signal independent of the Agent's own output. In the spec phase, that signal is cross-validation. In the execution phase, it is tests.
 
-## If You Cannot Write a Test, the Spec Is Not Specific Enough
+## Validating the Spec Through Tests
 
 Putting test infrastructure first is the earliest possible check on spec quality.
 
