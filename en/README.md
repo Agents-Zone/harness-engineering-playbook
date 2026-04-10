@@ -10,7 +10,7 @@ How to organize AI and humans for reliable software delivery
 
 Over the past two years, the capability frontier of AI coding tools has been continuously expanding. From function-level completion to module-level generation to building entire projects, each generation of models has raised the upper bound of what can be handled. Developers have felt the improvement in sync: writing code is indeed faster, and they have become 1.5x, 2x engineers.
 
-But when teams actually review their delivery data, a puzzling phenomenon emerges. PR counts go up, but at the same time review times keep getting longer, and production bugs seem to be multiplying too. The models are stronger, the tools are better, it feels faster, yet the overall productivity gain has fallen far short.
+But when teams actually review their delivery data, a puzzling phenomenon emerges. PR counts go up, but at the same time review times keep getting longer, and production bugs seem to keep multiplying. The models are stronger, the tools are better, it feels faster, yet the overall productivity gain has fallen far short.
 
 Meanwhile, another group of people have produced entirely different results with the same tools. PingCAP CTO Ed Huang used AI to rewrite TiDB's PostgreSQL compatibility layer into near-production-quality Rust code. Pigsty founder Ruohang Feng single-handedly maintains an enterprise-grade PostgreSQL distribution integrating over 460 extensions, routinely orchestrating ten Agents working in parallel. Their productivity gains are measured in tens of multiples, and what they ship is production-deployed, battle-tested code.
 
