@@ -33,14 +33,14 @@
 
 ### 卷三：治理百倍速的组织
 
-* [组织重构：当 Agent 改变了协作的前提](chapters/06-hybrid-team.md)
-  * [为什么旧结构失效了](chapters/06a-why-old-structure-fails.md)
-  * [瓶颈转移：从代码到组织](chapters/06b-bottleneck-shift.md)
-  * [让流程匹配 Agent 速度](chapters/06c-process-speed.md)
-* [角色重定义：从写代码到设计验证体系](chapters/07-role-redefinition.md)
-  * [围绕治理重新设计角色](chapters/07a-new-roles.md)
-  * [用机制替代人际协调](chapters/07b-coordination.md)
-* [演进：组织资产与新护城河](chapters/evolution-v3.md)
+* [组织重构：当 Agent 改变了协作的前提](卷3.md)
+  * [为什么旧结构失效了](卷3.md)
+  * [瓶颈转移：从代码到组织](卷3.md)
+  * [让流程匹配 Agent 速度](卷3.md)
+* [角色重定义：从写代码到设计验证体系](卷3.md)
+  * [围绕治理重新设计角色](卷3.md)
+  * [用机制替代人际协调](卷3.md)
+* [演进：组织资产与新护城河](卷3.md)
 
 ---
 
