@@ -4,7 +4,7 @@ How to organize AI and humans for reliable software delivery
 
 **AgentsZone Community Collective Work** | Editors: Quanzhi Fu, Chi Ma
 
-> **📖 Early Draft** Part I (Specification, Verification, Evolution) has a first draft. Parts II and III are in active development with the table of contents and core arguments finalized. If you're interested in these topics or have practical experience to share, [get in touch](contributors.md).
+> **📖 Early Draft** This book is still in active development. The current content is for preview purposes only. If you're interested in these topics or have practical experience to share, [get in touch](contributors.md).
 
 ## Agent Coding: 1.5x or 100x
 
