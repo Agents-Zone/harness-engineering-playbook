@@ -10,13 +10,13 @@ How to organize AI and humans for reliable software delivery
 
 Over the past two years, the capability frontier of AI coding tools has been continuously expanding. From function-level completion to module-level generation to building entire projects, each generation of models has raised the upper bound of what can be handled. Developers have felt the improvement in sync: writing code is indeed faster, and they have become 1.5x, 2x engineers.
 
-But when teams actually review their delivery data, a puzzling phenomenon emerges. PR counts go up, review times get longer, bug rates climb. The models are stronger, the tools are better, it feels faster, yet the overall productivity gain has fallen far short.
+But when teams actually review their delivery data, a puzzling phenomenon emerges. PR counts go up, but at the same time review times keep getting longer, and production bugs seem to be multiplying too. The models are stronger, the tools are better, it feels faster, yet the overall productivity gain has fallen far short.
 
 Meanwhile, another group of people have produced entirely different results with the same tools. PingCAP CTO Ed Huang used AI to rewrite TiDB's PostgreSQL compatibility layer into near-production-quality Rust code. Pigsty founder Ruohang Feng single-handedly maintains an enterprise-grade PostgreSQL distribution integrating over 460 extensions, routinely orchestrating ten Agents working in parallel. Their productivity gains are measured in tens of multiples, and what they ship is production-deployed, battle-tested code.
 
-Both sides reflect genuine experiences. You feel like you can only manage 1.5x, and you are right. They achieved tens of multiples and shipped to production, and that is also right. Same models, same tools, so where does the gap come from? Conversations with over a hundred developers in the AgentsZone community have provided a clear answer. This book systematically distills the methodology and engineering practices for going from 1.5x to 100x.
+Both sides reflect genuine experiences. You feel like you can only manage 1.5x, and you are right. They achieved tens of multiples and shipped to production, and that is also right. Same models, same tools, so where does the gap come from? It comes from the lack of a systematic engineering methodology for managing AI output. In this book, we introduce the theoretical framework for enabling Agents to reliably produce production-grade code: the core principles and concepts of Harness Engineering. Drawing on practical exchanges with hundreds of developers in the AgentsZone community, this book systematically distills the concrete methodology and engineering practices for achieving the productivity leap from 1.5x to 100x through Harness Engineering.
 
-If you are a coding beginner or product person who has already vibe-coded a working product and is now thinking about how to iterate and run it reliably in production, Part I on specification and verification will help you directly. If you are a programmer going through the transition from "writing code yourself" to "directing Agents to write code," the productivity ladder throughout this book maps your transition path: from managing a single task well, to managing a fleet of Agents, to redefining your role on the team. If you are a technical leader at an enterprise driving your team's AI-native transformation, Part III on organizational architecture will be directly relevant. Feel free to start from the chapter that matches your current stage.
+If you are a coding beginner or product person who has already vibe-coded a working product and is now thinking about how to iterate and run it reliably in production, Part I on specification and verification will help you directly. If you are a programmer going through the transition from "writing code yourself" to "directing Agents to write code," the productivity ladder throughout this book maps your transition path: from managing a single task well, to managing a fleet of Agents, to redefining your role on the team. If you are a technical leader at an enterprise driving your team's AI-native transformation, Part III on organizational architecture will be directly relevant. Regardless of your level, after reading this book you will have a deep understanding of Harness Engineering's core principles, be able to precisely locate root causes when Agent software engineering goes out of control, judge whether the ever-proliferating Agent management frameworks are solving real problems, and gain concrete, actionable practices to achieve genuine productivity leaps.
 
 ## The Difference Comes from Discipline
 
@@ -30,11 +30,13 @@ The institutional systems accumulated over sixty years of software engineering, 
 
 When the practitioner shifts from human to AI Agent, all these implicit assumptions break down. Agents faithfully execute their input; ambiguities become random decisions. Their effective processing capacity has a hard ceiling; once task scale exceeds it, quality drops off a cliff. Their memory ends at the session boundary; every session is a new hire's first day. Their attention stops at the current instruction; modifying a line of display copy and modifying payment processing logic look exactly the same to them. At the same time, their output speed is 10 to 100 times that of a human, amplifying the impact of every one of these issues.
 
-When the practitioner changes, the engineering discipline must change with it. This is the core thesis of this book. Chapter 1 will analyze these five structural characteristics and the engineering challenges they create in detail.
+OpenAI gave this new discipline a fitting name: Harness Engineering. We need an entirely new, comprehensive software engineering discipline to manage the uncertainty introduced by these AI characteristics.
+
+When the practitioner changes, the engineering discipline must change with it. The introduction will analyze these five structural characteristics and the engineering challenges they create in detail.
 
 ## Why Vibe Coding and Existing Frameworks Are Not Enough
 
-With this thesis understood, we can see the limitations of current approaches clearly.
+With this understood, we can see the limitations of current approaches clearly.
 
 Vibe Coding is the starting point: write prompts by feel, let AI generate code, ship it if it runs. For one-off scripts and rapid prototypes, it is genuinely efficient. But Vibe Coding is open-loop control: issue an instruction, accept the result, judge quality by gut feeling. There is no spec defining what "correct" means, no automated verification checking whether the output matches intent. Open-loop systems are barely usable at small scale; once a project requires long-term maintenance and team collaboration, the randomness becomes unacceptable.
 
@@ -54,11 +56,12 @@ Facing these challenges, this book's approach is built on two engineering princi
 
 These two principles run through every chapter of this book. Closed-loop control ensures each step is reliable; evolution ensures the system keeps getting better.
 
+
 ## Roadmap and Table of Contents
 
 The book unfolds along a productivity ladder. Chapter 1 analyzes the structural characteristics and engineering challenges of Agents, establishing the theoretical foundation for the entire book. The content that follows is organized into three parts, each corresponding to a stage of productivity leap.
 
-**Part I: Reliable Agent Programming (1 to 10x).** The first step from Vibe Coding to engineering. You sit in front of the Agent in a call-and-response mode, but your output shifts from random to reliable. Chapter 2 transforms ambiguity into certainty through specification; Chapter 3 closes the feedback loop through automated verification. Master these two chapters and you move from writing prompts by feel into an engineering mode with specs, verification, and closed-loop control, multiplying your productivity several times over.
+**Part I: Reliable Agent Programming (1 to 10x).** The first step from Vibe Coding to engineering. You still sit in front of the Agent in a call-and-response mode, but output shifts from randomness-filled vibes to reliable, verifiable production-grade code. Chapter 2 transforms ambiguity into certainty through specification; Chapter 3 closes the feedback loop through automated verification. Master these two chapters and you move from writing prompts by feel into an engineering mode with specs, verification, and closed-loop control, multiplying your productivity several times over.
 
 **Part II: Scaling Agent Development (10 to 100x).** With the specification and verification system from Part I, you can begin to let Agents execute autonomously. Autonomous execution without specs is YOLO mode, and disaster is certain. Chapter 4 addresses context collapse and cross-session memory in long-running execution, enabling a single Agent to work continuously across sessions and days on a project. Chapter 5 extends this further to multi-Agent parallelism, solving isolation and integration problems. You transition from being the Agent's real-time conversation partner to being the designer and acceptor of tasks, gaining another order of magnitude in productivity.
 
