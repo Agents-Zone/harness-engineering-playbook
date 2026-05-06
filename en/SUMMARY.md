@@ -20,16 +20,7 @@
 
 ### Part II: Scaling Agent Development (10→100x)
 
-* [Letting Agents Run: Decomposition, Context, and Memory](chapters/04-long-running.md)
-  * [Context Collapse: Why Long Tasks Go Off the Rails](chapters/04a-context-wall.md)
-  * [Task Decomposition: Controlling Execution Chunk Granularity](chapters/04b-task-decomposition.md)
-  * [Context Engineering: Deciding What the Agent Sees](chapters/04c-context-engineering.md)
-  * [Cross-Session Persistence: Memory and Handoff](chapters/04d-memory.md)
-* [Multi-Agent Parallelism: Isolation and Integration](chapters/05-multi-agent.md)
-  * [Isolation: Preventing Concurrency Conflicts Between Agents](chapters/05a-isolation.md)
-  * [Integration: Ensuring Consistency Across Independent Outputs](chapters/05b-integration.md)
-  * [Platform Engineering: Building Multi-Layer Feedback Infrastructure](chapters/05c-platform.md)
-* [Evolution: From Manual Inspection to Automated Drift Detection](chapters/evolution-v2.md)
+*Volume 2 is being rewritten. Translations will follow once the Chinese draft stabilizes.*
 
 ### Part III: Governing the 100x Organization
 

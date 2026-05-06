@@ -20,16 +20,9 @@
 
 ### 卷二：规模化 Agent 开发（10→100x）
 
-* [放手让 Agent 跑：分解、上下文与记忆](chapters/04-long-running.md)
-  * [上下文崩塌：长任务失控的结构性原因](chapters/04a-context-wall.md)
-  * [任务分解：控制每个执行块的粒度](chapters/04b-task-decomposition.md)
-  * [上下文工程：决定 Agent 看到什么](chapters/04c-context-engineering.md)
-  * [跨会话持久化：记忆与任务交接](chapters/04d-memory.md)
-* [多 Agent 并行：隔离与集成](chapters/05-multi-agent.md)
-  * [隔离：避免 Agent 间的并发冲突](chapters/05a-isolation.md)
-  * [集成：确保独立产出的一致性](chapters/05b-integration.md)
-  * [平台工程：搭建多层反馈基础设施](chapters/05c-platform.md)
-* [演进：从人工巡检到自动化漂移检测](chapters/evolution-v2.md)
+* [规约：让意图能被并行分发](chapters/04-spec-distributed.md)
+* [验证：当人不再能兜底](chapters/05-verification-defense.md)
+* [演进：harness 必然演化](chapters/evolution-v2.md)
 
 ### 卷三：治理百倍速的组织
 

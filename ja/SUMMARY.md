@@ -20,16 +20,7 @@
 
 ### 第二巻：Agent開発のスケーリング（10→100x）
 
-* [Agentを自律稼働させる：分解、コンテキスト、メモリ](chapters/04-long-running.md)
-  * [コンテキスト崩壊：長期タスクが制御不能になる構造的理由](chapters/04a-context-wall.md)
-  * [タスク分解：実行ブロックの粒度を制御する](chapters/04b-task-decomposition.md)
-  * [Context Engineering：Agentが何を見るかを決める](chapters/04c-context-engineering.md)
-  * [クロスセッション永続化：メモリと引き継ぎ](chapters/04d-memory.md)
-* [マルチAgent並列処理：分離と統合](chapters/05-multi-agent.md)
-  * [分離：Agent間の並行競合を防ぐ](chapters/05a-isolation.md)
-  * [統合：独立した成果物の一貫性を確保する](chapters/05b-integration.md)
-  * [Platform Engineering：多層フィードバック基盤の構築](chapters/05c-platform.md)
-* [進化：手動巡回から自動化ドリフト検知へ](chapters/evolution-v2.md)
+*第二巻は再構成中です。中国語版の確定後に翻訳します。*
 
 ### 第三巻：100倍組織のガバナンス
 
