@@ -21,7 +21,15 @@
 ### 卷二：规模化 Agent 开发（10→100x）
 
 * [规约：让意图能被并行分发](chapters/04-spec-distributed.md)
+  * [spec 从工作台变成载体](chapters/04a-artifact-role.md)
+  * [载体的一条原则](chapters/04b-artifact-principle.md)
+  * [共同产出与可判定接口](chapters/04c-cocreation.md)
+  * [实践：从粗略意图到可用载体](chapters/04d-case-study.md)
 * [验证：当人不再能兜底](chapters/05-verification-defense.md)
+  * [验证从人转移到机制](chapters/05a-verification-to-mechanism.md)
+  * [漂移的两个地点](chapters/05b-drift-locations.md)
+  * [三层机制的分工](chapters/05c-three-layers.md)
+  * [实践：从载体到通过验证](chapters/05d-case-study.md)
 * [演进：harness 必然演化](chapters/evolution-v2.md)
 
 ### 卷三：治理百倍速的组织
