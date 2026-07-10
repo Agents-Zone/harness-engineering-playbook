@@ -21,17 +21,17 @@
 ### 卷二：规模化 Agent 开发（10→100x）
 
 * [规约：让意图能被并行分发](chapters/04-spec-distributed.md)
-  * [spec 到载体的转变](chapters/04a-artifact-role.md)
-  * [载体的一条原则](chapters/04b-artifact-principle.md)
-  * [共同产出与可判定接口](chapters/04c-cocreation.md)
-  * [实践案例](chapters/04d-case-study.md)
+  * [规约规模转变：人类脱离循环](chapters/04a-artifact-role.md)
+  * [设计原则：自包含](chapters/04b-artifact-principle.md)
+  * [产出方式：可判定决策驱动](chapters/04c-cocreation.md)
+  * [实践：博客系统审核队列](chapters/04d-case-study.md)
 * [验证：当人不再能兜底](chapters/05-verification-defense.md)
-  * [验证责任的转移](chapters/05a-verification-to-mechanism.md)
-  * [漂移的两个地点](chapters/05b-drift-locations.md)
-  * [三层机制的分工](chapters/05c-three-layers.md)
-  * [实践案例](chapters/05d-case-study.md)
+  * [验证责任转移](chapters/05a-verification-to-mechanism.md)
+  * [大规模验证的锚点](chapters/05b-drift-locations.md)
+  * [三层机制：硬门禁、软门禁、集成验证](chapters/05c-three-layers.md)
+  * [实践：博客审核队列的验证链路](chapters/05d-case-study.md)
 * [演进：harness 必然演化](chapters/evolution-v2.md)
-* [卷二回顾：harness 作为独立运转的对齐系统](chapters/v2-conclusion.md)
+* [卷二回顾：迭代的harness系统](chapters/v2-conclusion.md)
 
 ### 卷三：治理百倍速的组织
 
